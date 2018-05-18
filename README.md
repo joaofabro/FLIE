@@ -19,6 +19,11 @@ The following source codes compose the Library:
 These "Rules" can then be aggregated into a "Fuzzy Controller". The code for the "simplest" fuzzy control system is depicted bellow:
 
 //------------------------------
+// Simple Example of use (save this excerpt and compile it together with the library - the easyest way is to just save this 
+// code with the name "flie.cpp"
+// Joao Alberto Fabro, fabro@utfpr.edu.br, 05/2018
+
+
 #include "flie.h"
 
 fuzzy_control fc;
