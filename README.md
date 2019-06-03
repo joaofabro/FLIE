@@ -65,12 +65,16 @@ int main()
  fs_hard.setrange(0,100);
  fs_hard.setval(0,75,100);
 
- Distace.setname("Distance");
+ Distance.setname("Distance");
+ 
  Distance.includecategory(&fs_near);
+ 
  Distance.includecategory(&fs_far);
 
  BreakControl.setname("Break");
+ 
  BreakControl.includecategory(&fs_soft);
+ 
  BreakControl.includecategory(&fs_hard);
 
  fc.definevars(Distance, BreakControl);
@@ -78,13 +82,17 @@ int main()
  fc.set_defuzz(CENTROID);
 
  // If Distance IS Near THEN BreakControl IS Hard
+ 
  fc.insert_rule("Near","Hard");
 
  // If Distance IS Far THEN BreakControl IS Soft
+ 
  fc.insert_rule("Far","Soft");
 
  // Variables for Input and Output
+ 
  float dist = 50.0;
+ 
  float breakPercentage;
 
  breakPercentage = fc.make_inference(dist);
